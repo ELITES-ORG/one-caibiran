@@ -1,0 +1,5 @@
+{
+  "$comment": "Gzip bytes the first page load may fetch: the entry script, its modulepreloaded chunks, and the stylesheet that index.html loads. Measured by scripts/check-bundle-size.mjs in CI. Ceiling is 500 kB of JavaScript and 200 kB of CSS — a guard against runaway growth, not a per-change budget. Raising either number needs a 'Budget raised: <why>' line in the pull request.",
+  "initialJsGzipBytes": 500000,
+  "initialCssGzipBytes": 200000
+}

@@ -1,0 +1,14 @@
+/* Variable fonts, weight axis only, self-hosted. Plus Jakarta Sans for UI and
+   body, Fraunces for headings (ADR 0013, ADR 0014). */
+@import '@fontsource-variable/fraunces/opsz.css';
+@import '@fontsource-variable/plus-jakarta-sans/wght.css';
+
+@import 'tailwindcss';
+
+/* Short screens: every phone held in landscape (320–430px tall), never a
+   tablet. Use as `short:…`. */
+@custom-variant short (@media (max-height: 30rem));
+
+@import './styles/theme.css';
+@import './styles/base.css';
+@import './styles/motion.css';
