@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useState, type CSSProperties } from 'react';
 import { Logo } from '@/components/icons/Logo';
 import { splashCanLeave, splashHoldMs, splashLogoDelayMs } from '@/pages/splash-timing';
+import { syncThemeBar, THEME_BAR_ATTR } from '@/pages/theme-bar';
 
 const NAME = 'OneKawayan';
 
@@ -13,6 +14,7 @@ export function Splash() {
   const [copyReady, setCopyReady] = useState(false);
 
   useLayoutEffect(() => {
+    syncThemeBar();
     if (phase === 'gone') return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -69,6 +71,7 @@ export function Splash() {
 
   return (
     <div
+      {...{ [THEME_BAR_ATTR]: '' }}
       className={`ui-roboto fixed inset-0 z-40 flex flex-col items-center justify-center bg-primary px-6 text-center${phase === 'leaving' ? ' splash-leave' : ''}`}
       role="status"
       aria-live="polite"
