@@ -1,6 +1,6 @@
 # Working in this repository
 
-Instructions for any AI agent or contributor working on One Kawayan.
+Instructions for any AI agent or contributor working on One Caibiran.
 
 ---
 
