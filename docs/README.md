@@ -1,4 +1,4 @@
-# One Kawayan developer documentation
+# One Caibiran developer documentation
 
 Documentation is split by **purpose**, not by feature. Each category answers a
 different question, and mixing them is what turns a docs folder into a junk
