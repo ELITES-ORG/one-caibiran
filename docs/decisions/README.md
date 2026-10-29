@@ -55,4 +55,5 @@ Number sequentially. Never renumber.
 | [0016](./0016-forest-green-and-gold.md) | Forest green and gold, one typeface | Accepted |
 | [0017](./0017-roboto-on-the-public-home.md) | Roboto on the public home, with GoAlmeria's corners | Accepted |
 | [0018](./0018-open-the-installed-app-full-screen.md) | Open the installed app full screen | Superseded by 0019 |
-| [0019](./0019-colour-the-navigation-bar-from-the-manifest.md) | Colour the navigation bar from the manifest, in the dark page green | Accepted |
+| [0019](./0019-colour-the-navigation-bar-from-the-manifest.md) | Colour the navigation bar from the manifest, in the dark page colour | Accepted |
+| [0020](./0020-seal-crimson-keeps-the-gold.md) | Seal crimson, and keep the gold | Accepted |

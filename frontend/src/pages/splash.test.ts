@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { splashCanLeave, splashHoldMs, splashLogoDelayMs } from './splash-timing';
 
 describe('splashLogoDelayMs', () => {
-  it('fades the logo in after the last letter of OneKawayan', () => {
-    expect(splashLogoDelayMs('OneKawayan'.length)).toBe(605);
+  it('fades the logo in after the last letter of OneCaibiran', () => {
+    expect(splashLogoDelayMs('OneCaibiran'.length)).toBe(650);
   });
 });
 

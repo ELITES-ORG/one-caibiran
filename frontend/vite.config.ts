@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, loadEnv, type Plugin } from 'vite';
 
 /**
  * One identifier per build, baked into the bundle and written beside it.
@@ -20,25 +20,32 @@ function buildIdFile(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), tailwindcss(), buildIdFile()],
-  define: {
-    __BUILD_ID__: JSON.stringify(BUILD_ID),
-  },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, fileURLToPath(new URL('.', import.meta.url)), '');
+  const port = Number(env.DEV_SERVER_PORT || 5173);
+  const apiProxy = env.DEV_API_PROXY || 'http://localhost:4000';
+
+  return {
+    plugins: [react(), tailwindcss(), buildIdFile()],
+    define: {
+      __BUILD_ID__: JSON.stringify(BUILD_ID),
     },
-  },
-  server: {
-    port: 5173,
-    // Proxying in dev keeps the browser on a single origin, so cookie-based
-    // sessions behave the same locally as they will in production.
-    proxy: {
-      '/api': {
-        target: 'http://localhost:4000',
-        changeOrigin: true,
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-  },
+    server: {
+      port,
+      strictPort: Boolean(env.DEV_SERVER_PORT),
+      // Proxying in dev keeps the browser on a single origin, so cookie-based
+      // sessions behave the same locally as they will in production.
+      proxy: {
+        '/api': {
+          target: apiProxy,
+          changeOrigin: true,
+        },
+      },
+    },
+  };
 });

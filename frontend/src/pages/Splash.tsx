@@ -3,7 +3,7 @@ import { Logo } from '@/components/icons/Logo';
 import { splashCanLeave, splashHoldMs, splashLogoDelayMs } from '@/pages/splash-timing';
 import { syncThemeBar, THEME_BAR_ATTR } from '@/pages/theme-bar';
 
-const NAME = 'OneKawayan';
+const NAME = 'OneCaibiran';
 
 type Phase = 'visible' | 'leaving' | 'gone';
 

@@ -2,7 +2,7 @@
   "name": "one-kawayan",
   "version": "0.1.0",
   "private": true,
-  "description": "One Kawayan",
+  "description": "One Caibiran",
   "scripts": {
     "setup": "npm run setup:env && npm run hooks:install && npm --prefix backend install && npm --prefix frontend install",
     "setup:env": "node scripts/setup-env.mjs",

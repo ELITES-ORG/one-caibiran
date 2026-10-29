@@ -1,6 +1,6 @@
 # 0019. Colour the navigation bar from the manifest, in the dark page green
 
-- **Status:** Accepted
+- **Status:** Accepted. The colours named below moved with the seal in [0020](./0020-seal-crimson-keeps-the-gold.md).
 - **Date:** 2026-10-29
 
 ## Context

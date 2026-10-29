@@ -139,7 +139,7 @@ const HOTLINES: { name: string; description: string; number: string }[] = [
   },
 ];
 
-const card = 'rounded-[16px] bg-surface shadow-[0_4px_12px_oklch(0.2_0.04_158/0.06)]';
+const card = 'rounded-[16px] bg-surface shadow-[0_4px_12px_oklch(0.2_0.04_29.2/0.06)]';
 const iconWell = 'flex size-10 items-center justify-center rounded-[12px] bg-green-100 text-green-700';
 
 export function HomePage() {
@@ -242,9 +242,9 @@ function HomeView({
     return (
       <div className="px-6 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[calc(8rem+env(safe-area-inset-bottom))]">
         <BackButton onClick={() => setHistory(false)} />
-        <h1 className="mt-4 text-[28px] leading-[1.2] font-extrabold tracking-[-0.02em]">History of Kawayan</h1>
+        <h1 className="mt-4 text-[28px] leading-[1.2] font-extrabold tracking-[-0.02em]">History of Caibiran</h1>
         <p className="mt-2 text-[14px] leading-[1.4] text-ink/70">
-          From Barrio Telegrafo to the Municipality we know today
+          From the old river mouth to the seventeen barangays of today
         </p>
         <ol className="mt-8">
           {HISTORY.map((entry, index) => (
@@ -280,9 +280,9 @@ function HomeView({
           className="pointer-events-none absolute top-16 right-2 size-36 overflow-hidden opacity-[0.18] min-[380px]:right-4 min-[380px]:size-44 min-[380px]:opacity-20"
         >
           <img
-            src="/logos/logo_nobg.png"
+            src="/logos/one_caibiran_pure_logo_no_white_circular_bg.png"
             alt=""
-            className="absolute top-[-52.06%] left-[-52.06%] size-[204.26%] max-w-none"
+            className="absolute top-1/2 left-1/2 size-[205%] max-w-none -translate-x-1/2 -translate-y-1/2"
           />
         </span>
         <div className="pointer-events-none absolute -bottom-14 -left-2 size-52 rounded-full bg-primary/15" />
@@ -303,7 +303,7 @@ function HomeView({
               </p>
               <h1 className="mt-3 text-[24px] leading-[1.02] font-extrabold tracking-[-0.03em] text-ink min-[380px]:text-[28px] min-[460px]:mt-4 min-[460px]:text-[32px] min-[460px]:tracking-[-0.075rem]">
                 <span className="block whitespace-nowrap">Welcome to</span>
-                <span className="block whitespace-nowrap text-gold-600">OneKawayan</span>
+                <span className="block whitespace-nowrap text-gold-600">OneCaibiran</span>
               </h1>
             </div>
             <p className="mt-2.5 text-[14px] leading-[1.35] text-ink/80 min-[460px]:mt-3 min-[460px]:text-[16px]">
@@ -343,7 +343,7 @@ function HomeView({
         <section className={cn(card, 'p-[22px]')}>
           <div className="flex items-center gap-2.5">
             <Glyph name="campaign-rounded" className="size-6 text-green-700" />
-            <h2 className="text-[22px] leading-tight font-bold">Better Kawayan</h2>
+            <h2 className="text-[22px] leading-tight font-bold">Better Caibiran</h2>
           </div>
           <p className="mt-3.5 text-[16px] leading-[1.45]">
             Create an account to report local issues directly to the municipality.
@@ -353,7 +353,7 @@ function HomeView({
 
         <Rule />
 
-        <h2 className="text-[24px] leading-tight font-bold">Explore Kawayan</h2>
+        <h2 className="text-[24px] leading-tight font-bold">Explore Caibiran</h2>
         <p className="mt-2 text-[14px] text-ink/70">Discover your next favorite spot in the municipality</p>
       </div>
 
@@ -385,7 +385,7 @@ function HomeView({
         </ul>
         <Rule />
         <h2 className="text-[28px] leading-[1.15] font-extrabold tracking-[-0.02em]">Discover Latest News</h2>
-        <p className="mt-1.5 text-[14px] text-ink/70">Latest news and announcements for Kawayan</p>
+        <p className="mt-1.5 text-[14px] text-ink/70">Latest news and announcements for Caibiran</p>
         <ul className="mt-[18px] flex flex-col gap-3.5">
           {NEWS.slice(0, 3).map((item) => (
             <li key={item.title}>
@@ -403,7 +403,7 @@ function HomeView({
           See more news
         </button>
         <Rule />
-        <h2 className="text-[22px] leading-tight font-bold">History of Kawayan</h2>
+        <h2 className="text-[22px] leading-tight font-bold">History of Caibiran</h2>
         <p className="mt-1.5 text-[14px] text-ink/70">Learn about the rich heritage of our municipality</p>
         <button type="button" className={cn(card, 'mt-[18px] flex w-full items-center gap-4 p-5 text-left')} onClick={() => setHistory(true)}>
           <span className="flex size-12 shrink-0 items-center justify-center rounded-[14px] bg-green-100 text-green-700">
@@ -412,8 +412,8 @@ function HomeView({
           <span className="min-w-0 flex-1">
             <span className="block text-[14px] font-bold">Discover Our Story</span>
             <span className="mt-1 block text-[12px] leading-[1.4] text-ink-muted">
-              From Barrio Telegrafo to the Municipality of Kawayan — explore centuries of heritage, culture, and
-              resilience.
+              From a riverside settlement named for the ibid to the Municipality of Caibiran — the flood, the
+              move of 1882, and the seventeen barangays of today.
             </span>
           </span>
           <Glyph name="arrow-forward-ios-rounded" className="size-4 shrink-0 text-green-700" />
@@ -610,7 +610,7 @@ function SearchField({
   onChange?: (value: string) => void;
 }) {
   return (
-    <label className="flex h-11 min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-hairline bg-surface px-2.5 shadow-[0_4px_12px_oklch(0.2_0.04_158/0.05)]">
+    <label className="flex h-11 min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-hairline bg-surface px-2.5 shadow-[0_4px_12px_oklch(0.2_0.04_29.2/0.05)]">
       <Glyph name="search-rounded" className="size-[18px] shrink-0 text-green-700" />
       <span className="sr-only">{placeholder}</span>
       <input
@@ -659,7 +659,7 @@ function BackButton({ onClick }: { onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex h-11 items-center gap-1 rounded-[16px] border border-hairline bg-surface px-3.5 text-[14px] font-semibold text-green-700 shadow-[0_4px_12px_oklch(0.2_0.04_158/0.05)]"
+      className="inline-flex h-11 items-center gap-1 rounded-[16px] border border-hairline bg-surface px-3.5 text-[14px] font-semibold text-green-700 shadow-[0_4px_12px_oklch(0.2_0.04_29.2/0.05)]"
     >
       <Glyph name="arrow-forward-ios-rounded" className="size-4 -scale-x-100" />
       Back
@@ -681,7 +681,7 @@ function IconButton({
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="flex size-11 shrink-0 items-center justify-center rounded-[16px] border border-hairline bg-surface text-green-700 shadow-[0_4px_12px_oklch(0.2_0.04_158/0.05)]"
+      className="flex size-11 shrink-0 items-center justify-center rounded-[16px] border border-hairline bg-surface text-green-700 shadow-[0_4px_12px_oklch(0.2_0.04_29.2/0.05)]"
     >
       {children}
     </button>
@@ -729,7 +729,7 @@ function FloatingNav({ tab, onSelect }: { tab: Tab; onSelect: (tab: Tab) => void
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-20 flex justify-center px-6 pb-[max(1rem,env(safe-area-inset-bottom))]">
       <nav
         aria-label="Sections"
-        className="pointer-events-auto flex h-16 w-full max-w-[300px] items-center justify-center rounded-[24px] bg-scrim shadow-[0_18px_28px_oklch(0.14_0.02_158/0.3)]"
+        className="pointer-events-auto flex h-16 w-full max-w-[300px] items-center justify-center rounded-[24px] bg-scrim shadow-[0_18px_28px_oklch(0.14_0.02_29.2/0.3)]"
       >
         {TABS.map((item) => {
           const selected = tab === item.id;

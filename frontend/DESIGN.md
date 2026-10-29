@@ -1,4 +1,4 @@
-# One Kawayan — design system
+# One Caibiran — design system
 
 This file is the rules a specimen page cannot show: when to use what, and what
 not to do. Tokens are in `src/styles/theme.css`. See
@@ -35,11 +35,12 @@ Size is chosen at the call site: display `text-5xl` / `text-6xl` · h1
 `text-base` · caption `text-xs`. Body copy and form fields stay at `text-md`
 (16px).
 
-**Palette — forest green and gold.** Sampled from the municipal seal.
-Neutrals are the warm `slate` ramp. `green` step 700 is the seal green
-(`#0F452B`). `gold` step 500 is the seal gold (`#FAC247`) and is a fill only:
-white and cream both fail on it, so a gold fill uses `text-on-accent`. These
-replace Tailwind's own ramps of the same names.
+**Palette — seal crimson and gold.** Sampled from the municipal seal.
+Neutrals are the warm `slate` ramp. The primary ramp is still named `green`
+in the stylesheet. Step 700 is the seal crimson (`#810000`). `gold` step 500
+stays the previous gold (`#FAC247`) and is a fill only: the banner wordmark,
+the active tab, and a gold button. White and cream both fail on it, so a gold
+fill uses `text-on-accent`. These replace Tailwind's own ramps of the same names.
 
 ---
 
@@ -76,7 +77,7 @@ replace Tailwind's own ramps of the same names.
 
 **Components**
 
-- `Button` variants are roles. `primary` is the seal green. `accent` is the
+- `Button` variants are roles. `primary` is the seal crimson. `accent` is the
   gold fill with a dark label, for the one call to action a screen exists for.
   `secondary` is a green outline. `danger` destroys. `inverse` sits on a green
   surface. One primary action visible in a view.
