@@ -30,5 +30,8 @@ cookies.txt
 # Local Supabase CLI scratch
 supabase/.temp/
 
+# Claude Code local settings
+.claude/settings.json
+
 # Issues
 issue.md
